@@ -1,198 +1,79 @@
-//date: 3-4-24
+// Looping structure 
 
-// always remember that in java the classname shoud be equal to the file name
-
-
-        // 
-        // for(int i = 5; i>=1; i--){
-        //     for(int j = 1; j<=5; j++){
-        //         System.out.print(i);
-        //     }
-        //     System.out.println();
+// for example:
+        //it will prient 20 times
+        // for(int i = 1; i <= 20; i++){
+        //     System.out.println("hello will be prient 20 times");
         // }
 
+/*  -in java looping structure is a block of statement which can be used to execute redudence statement 
+    - due to looping structure we dont have to write redudente statements
+    -by looping structure we can remove code complexcity
+    -types of looping structure: while loop, do while loop, for loop, and switch statement
 
-        // 5 stars in column of 5 rows of 5 columns of 5 rows
-        // int n = 5; 
-        // for(int i = 1; i<=n; i++){
-        //     for(int j = 1; j<=n; j++){
-        //         for(int k = 1; k <= n; k++){
-        //             for(int l = 1; l <= n; l++){
-        //                 System.out.print("*");
-        //             }
-        //             System.out.print(" ");
-        //         }
-        //         System.out.println();
-        //     }
-        //     System.out.println();
-        // }
-        // ***** ***** ***** ***** ***** 
-        // ***** ***** ***** ***** *****
-        // ***** ***** ***** ***** *****
-        // ***** ***** ***** ***** *****
-        // ***** ***** ***** ***** ***** 
-
-        // ***** ***** ***** ***** *****
-        // ***** ***** ***** ***** *****
-        // ***** ***** ***** ***** *****
-        // ***** ***** ***** ***** *****
-        // ***** ***** ***** ***** *****
-
-        // ***** ***** ***** ***** *****
-        // ***** ***** ***** ***** ***** 
-        // ***** ***** ***** ***** *****
-        // ***** ***** ***** ***** *****
-        // ***** ***** ***** ***** *****
-
-        // ***** ***** ***** ***** *****
-        // ***** ***** ***** ***** *****
-        // ***** ***** ***** ***** *****
-        // ***** ***** ***** ***** *****
-        // ***** ***** ***** ***** *****
-
-        // ***** ***** ***** ***** ***** 
-        // ***** ***** ***** ***** *****
-        // ***** ***** ***** ***** *****
-        // ***** ***** ***** ***** *****
-        // ***** ***** ***** ***** *****
-
-
-        //trangle
-        // int n = 5;
-        // for(int i = 1; i<=n; i++){
-        //     for(int j = i; j>=1; j--){
-        //        System.out.print("*");
-        //     }
-        //     System.out.println();
-        // }
-        // *
-        // **
-        // ***
-        // ****
-        // *****
-
-
-
-        // // 
-        // int n = 5;
-        // for(int i = n; i>=1; i--){
-        //     for(int j = i; j<=n; j++){
-        //        System.out.print("*");
-        //     }
-        //     System.out.println();
-        // }
-        // *
-        // **
-        // ***
-        // ****
-        // *****
-
-
-
-        // int n = 5;
-        // for(int i = 1; i<=n; i++){
-        //     for(int j = i; j<=n; j++){
-        //         System.out.print("*");
-        //     }
-        //     System.out.println();
-        // }
-        // *****
-        // ****
-        // ***
-        // **
-        // *
-
-
-        
-        // int n = 5;
-        // for(int i=n; i>=1; i--){
-        //     for(int j=i; j>=1; j--){
-        //         System.out.print("*");
-        //     }
-        //     System.out.println();
-        // }
-        // *****
-        // ****
-        // ***
-        // **
-        // *
-
-
-
-        // int n = 5;
-        // for(int i=1; i<=n; i++){
-        //     for(int j = i; j >= 1; j--){
-        //         System.out.print(i);
-        //     }
-        //     System.out.println();
-        // }
-        // 1
-        // 22
-        // 333
-        // 4444
-        // 55555
-
-
-
-        // int n = 5;
-        // for(int i=n; i>=1; i--){
-        //     for(int j=i; j<=n; j++){
-        //         System.out.print(i);
-        //     }
-        //     System.out.println();
-        // }
-        // 5
-        // 44
-        // 333
-        // 2222
-        // 11111
-
-
-        // 11111
-        // 2222
-        // 333
-        // 44
-        // 5
-
-
-
-
-        // int n=5;
-        // for(int i=1; i<=n; i++){
-        //     for(int j = 1; j<=i; j++){
-        //         System.out.print(j);
-        //     }
-        //     System.out.println();
-        // }
-        // 1
-        // 12
-        // 123
-        // 1234
-        // 55555 
-
-
-
-
-        // 1
-        // 21
-        // 321
-        // 4321
-        // 54321
-
-class program1{
-    public static void main(String args[]){
-        int n = 5; 
-        for(int i = 1; i<=n; i++){
-            for(int j = 1; j<=n; j++){
-                for(int k = 1; k <= n; k++){
-                    for(int l = 1; l <= n; l++){
-                        System.out.print("*");
-                    }
-                    System.out.print(" ");
-                }
-                System.out.println();
+    1) while loop:
+        -tocreate while loop we require while keyword
+        -syntax:
+            while(condition){
+                //statement
             }
-            System.out.println();
-        }
+        -to execute while loop it requires boolean true value
+        -to make a condition we can use relational and logiucal operators
+        -while loop checks condition at begining hence it is considers as an entry control loop 
+
+*/
+
+
+
+// int a = 1;
+// while (a<10) {
+//     System.out.println(a++);
+// }
+
+
+// int a = 10;
+// while (a>=1) {
+// System.out.print(a--);
+// }
+
+// int a = 10;
+// while (a>=1) {
+// System.out.print(a);
+// a+=2;
+// }
+
+// ----------------------
+
+/* 
+
+    2) do while loop
+        -for this we use do and while keywords 
+        -syntax:
+            do{
+                //statements;
+            }while(condition)
+        -to execute do while loop it requires boolean true value
+        -to make a condition we can use relational and logical operator
+        -do while loop checks condition at the end hence it  is consiuder as exit control loop 
+        -it will execute itselef at least once because it checks condition at last
+        -do while loop mostely used in manu driven application
+ */
+
+
+// int a = 1;
+// do{
+//     System.out.println(a++);
+// }while(a<=10);
+
+class Program1{
+    public static void main(String args[]){
+        
     }
 }
+
+// ---------------------------------
+
+/* 
+    2) for loop
+        -
+ */
