@@ -1,5 +1,8 @@
 // date : 30-3-24
 
+
+// always remember that in java the classname shoud be equal to the file name
+
 // write a program to find last digit of a given number 
 // int num = 544575;
 // int lastDigit = num % 10;

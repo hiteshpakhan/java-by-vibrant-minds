@@ -1,4 +1,4 @@
-// Looping structure 
+// Looping structure //date:1-4-24
 
 // for example:
         //it will prient 20 times
@@ -65,15 +65,180 @@
 //     System.out.println(a++);
 // }while(a<=10);
 
-class Program1{
-    public static void main(String args[]){
-        
-    }
-}
 
 // ---------------------------------
+//instant , static , and local we have this three types of variable inside java 
+// and remember that java does not have gloable variable concept
 
-/* 
+/* date : 2-4-24
     2) for loop
-        -
+        -to create for loop we can use the for keyword
+        -syntax:
+            for(initialization; condition; increment / decrement){structure}
+        -iniatialization phase :
+            -in initialization phase number can be initialized
+            -here assignnment and unary operator can be used
+            -here declared variable also called as local variable
+            -this phase executes once at the begining
+        -condition statement:
+            -it requires boolean true value
+            -to make a condition we can use relational or logical condition  
+            -this phase executes every time at begining
+        -increment/decrement phase
+            -this phase can be used to make operation or operand
+            -here unary or assignment operator can be used
+            -this phase executes every time at last
  */
+
+
+
+// for(int j=1; j<=5; j++){
+//     for(int i=1; i<=5; i++){
+//         System.out.print("*");
+//     }
+//     System.out.println();
+// }
+// *****
+// *****
+// *****
+// *****
+// *****
+ 
+
+
+
+// for(int j=1; j<=5; j++){
+//     for(int i=1; i<=5; i++){
+//         System.out.print("*");
+//     }
+//     System.out.print("\t"); //here "\t means tab space"
+//     for(int i=1; i<=5; i++){
+//         System.out.print("*");
+//     }
+//     System.out.println();
+// }
+// *****   *****
+// *****   *****
+// *****   *****
+// *****   *****
+// *****   *****
+
+
+
+// for(int i=1; i<=5; i++){
+//     for(int j=1; j<=5; j++){
+//         System.out.print(j);
+//     }       
+// System.out.println();
+// }
+// 12345
+// 12345
+// 12345
+// 12345
+// 12345
+
+
+// for(int i=1; i<=5; i++){
+//     for(int j=1; j<=5; j++){
+//         System.out.print(i);
+//     }       
+// System.out.println();
+// }
+// 11111
+// 22222
+// 33333
+// 44444
+// 55555
+
+
+// for(int i=5; i>=1; i--){
+//     for(int j=1; j<=5; j++){
+//         System.out.print(i);
+//     }       
+// System.out.println();
+// }
+// 55555
+// 44444
+// 33333
+// 22222
+// 11111
+
+// for(int i=1; i<=5; i++){
+//     for(int j=5; j>=1; j--){
+//         System.out.print(j);
+//     }       
+// System.out.println();
+// }
+// 54321
+// 54321
+// 54321
+// 54321
+// 54321
+
+
+// for(int i=1; i<=5; i++){
+//     for(int j=5; j>=1; j--){
+//         System.out.print((char)(j+64));
+//     }       
+// System.out.println();
+// }
+// EDCBA
+// EDCBA
+// EDCBA
+// EDCBA
+// EDCBA
+
+
+
+// for(int i=1; i<=5; i++){
+//     for(int j=5; j>=1; j--){
+//         System.out.print((char)(j+96));
+//     }       
+// System.out.println();
+// }
+// edcba
+// edcba
+// edcba
+// edcba
+// edcba
+
+
+
+// for(int i=1; i<=5; i++){
+//     for(int j=1; j<=5; j++){
+//         System.out.print((char)(i+64));
+//     }       
+// System.out.println();
+// }
+// AAAAA
+// BBBBB
+// CCCCC
+// DDDDD
+// EEEEE
+
+
+
+// for(int i=1; i<=5; i++){
+//     for(int j=1; j<=5; j++){
+//         System.out.print((char)(j+64));
+//     }       
+// System.out.println();
+// }
+// ABCDE
+// ABCDE
+// ABCDE
+// ABCDE
+// ABCDE
+
+
+
+class Program1{
+    public static void main(String args[]){
+        for(int i=1; i<=5; i++){
+            for(int j=1; j<=5; j++){
+                System.out.print((char)(j+64));
+            }       
+        System.out.println();
+        }
+    }
+}

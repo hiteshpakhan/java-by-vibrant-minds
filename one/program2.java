@@ -1,6 +1,6 @@
+//date 3&4 april on this page
 //date: 3-4-24
 
-// always remember that in java the classname shoud be equal to the file name
 
 
 // 
@@ -168,11 +168,17 @@
 // 12
 // 123
 // 1234
-// 55555 
+// 12345 
 
 
 
-
+// int n=5;
+//     for(int i=1; i<=n; i++){
+//         for(int j = i; j>=1; j--){
+//             System.out.print(j);
+//         }
+//         System.out.println();
+//     }
 // 1
 // 21
 // 321
@@ -212,6 +218,21 @@
 // 333
 // 2222
 // 11111
+
+
+   
+// int n = 5;
+// for(int i = n; i>=1; i--){
+//     for(int j = i; j<=n; j++){
+//         System.out.print((char)(i+64));
+//     }
+//     System.out.println();
+// }
+// E
+// DD
+// CCC
+// BBBB
+// AAAAA
 
 
 
@@ -291,7 +312,20 @@
 
 
 
+// public class program2 {
+//     public static void main(String[] args) {
+//     }
+// }
+
 public class program2 {
     public static void main(String[] args) {
+        
+int n = 5;
+for(int i = n; i>=1; i--){
+    for(int j = i; j<=n; j++){
+        System.out.print((char)(i+64));
+    }
+    System.out.println();
+}
     }
 }
