@@ -399,7 +399,7 @@
 // 1       2       3       4       5
 
 
-
+//#imp
 // int n = 5; 
 // int count = 1; 
 // for(int i = n; i >= 1; i--){ 
@@ -458,8 +458,8 @@
 
 // int n = 5;
 // int count = ((n * (n + 1)) / 2) - n+1; 
-// //or
-// // int count = ((n * (n - 1)) / 2) + 1; 
+// // #or
+// // #int count = ((n * (n - 1)) / 2) + 1; 
 // for(int i = n; i >= 1; i--){ 
 //     int c = count;
 //     for(int j = n; j >= i; j--){  
@@ -476,7 +476,7 @@
 // 15      10      6       3       1
 
 
-
+// #imp
 // int n = 5;
 // int count = 1;
 // for(int i = n; i >= 1; i--){ 
