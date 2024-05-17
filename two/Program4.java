@@ -66,6 +66,11 @@
 //     {
 //         InputStreamReader isr = new InputStreamReader(System.in);
 //         BufferedReader br = new BufferedReader(isr);
+
+// //   or you can replace upper 2 lines by this : BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+//         System.out.println("Enter oyur name: "); 
+//         String str = bfn.readLine();
         
 //         System.out.println("Enter Value: ");
 //         int a = Integer.parseInt(br.readLine());
@@ -152,46 +157,152 @@
 // input: {10,20,30,40,50}
 // output:{20,30,40,50,10}
 
-//example:6
-import java.util.Arrays;            //#imp you have to import this to print the array
-public class Program4 {
+// //example:6
+// import java.util.Arrays;            //#imp you have to import this to print the array
+// public class Program4 {
 
-    public static void main(String[] args){
+//     public static void main(String[] args){
         
-        int a[] = {10,20,30,40,50};
-        int temp = a[0];
+//         int a[] = {10,20,30,40,50};
+//         int temp = a[0];
 
-        for(int i = 1; i < a.length; i++){
-            a[i-1] = a[i];
-        }
-        a[a.length-1] = temp;
+//         for(int i = 1; i < a.length; i++){
+//             a[i-1] = a[i];
+//         }
+//         a[a.length-1] = temp;
 
-        System.out.println(Arrays.toString(a));         //#this is how you can print an array
+//         System.out.println(Arrays.toString(a));         //#this is how you can print an array
     
-    }
-}
-// output:
-// [20, 30, 40, 50, 10]
+//     }
+// }
+// // output:
+// // [20, 30, 40, 50, 10]
 
 
-
+//-------------------------------------------------------------
 // wap to shift last element to first from array
 // input: {10,20,30,40,50}
 // output:{50,10,20,30,40}
 
+// //example:7
+// import java.util.Arrays;            
+// public class Program4 {
+
+//     public static void main(String[] args){
+        
+//         int a[] = {10,20,30,40,50};
+//         int temp = a[a.length - 1];
+
+//         for(int i = a.length - 1; i > 0; i--){
+//             a[i] = a[i - 1];
+//         }
+//         a[0] = temp;
+
+//         System.out.println(Arrays.toString(a));        
+    
+//     }
+// }
+// // output: [50, 10, 20, 30, 40]
+
+// ----------------------------------------------
 // wap to sqap first and last element from array
 // input: {10,20,30,40,50}
 // output:{50,10,20,30,10}
 
+// //example:8
+// import java.util.Arrays;            
+// public class Program4 {
+
+//     public static void main(String[] args){
+        
+//         int a[] = {10,20,30,40,50};
+//         int temp = a[a.length - 1];
+//         a[a.length - 1] = a[0];
+//         a[0] = temp;
+
+//         System.out.println(Arrays.toString(a));        
+    
+//     }
+// }
+// // output:
+// // [50, 20, 30, 40, 10]
+
+
+
+//----------------------------------------------
 // wap to shift first element to last from array without using 3rd variable
 // input: {10,20,30,40,50}
 // output:{20,30,40,50,10}
 
+// //example:9
+// import java.util.Arrays;            
+// public class Program4 {
+
+//     public static void main(String[] args){
+
+//         int a[] = {10,20,30,40,50};
+        
+//         for(int i = 0; i < a.length - 1; i++){
+//             a[i] += a[i + 1];
+//             a[i + 1] = a[i] - a[i + 1];
+//             a[i] -= a[i + 1]; 
+//         }
+
+//         System.out.println(Arrays.toString(a));        
+    
+//     }
+// }
+// // output:
+// // [20, 30, 40, 50, 10]
+
+
+//----------------------------------------
 // wap to shift last element to first from array without using 3rd variable
 // input: {10,20,30,40,50}
 // output:{50,10,20,30,40}
 
+// //example:10
+// import java.util.Arrays;            
+// public class Program4 {
+
+//     public static void main(String[] args){
+
+//         int a[] = {10,20,30,40,50};
+        
+//         for(int i = a.length-2; i >= 0; i--){
+//             a[i] += a[i + 1];
+//             a[i + 1] = a[i] - a[i + 1];
+//             a[i] -= a[i + 1]; 
+//         }
+
+//         System.out.println(Arrays.toString(a));        
+    
+//     }
+// }
+// // output:
+// // [50, 10, 20, 30, 40]
+
+
+
+//-------------------------------------------
 // wap to sqap first and last element from array without using 3rd variable
 // input: {10,20,30,40,50}
 // output:{50,10,20,30,10}
 
+// //example:11
+// import java.util.Arrays;            
+// public class Program4 {
+
+//     public static void main(String[] args){
+        
+//         int a[] = {10,20,30,40,50};
+//         a[0] += a[a.length - 1];
+//         a[a.length - 1] = a[0] - a[a.length - 1];
+//         a[0] -= a[a.length - 1]; 
+
+//         System.out.println(Arrays.toString(a));        
+    
+//     }
+// }
+// // output:
+// // [50, 20, 30, 40, 10]
