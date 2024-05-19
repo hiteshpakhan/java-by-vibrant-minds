@@ -1,5 +1,6 @@
-//date : 9-5-24
+//date : 9-5-24   & date: 10-5-24
 
+// date : 9-5-24
 /*
 # how to take input from user
 
@@ -150,9 +151,14 @@
 
 
 
+
+
+
+
+
 //---------------------------------------
 
-// homework
+// homework 
 // wap to shift first element to last from array
 // input: {10,20,30,40,50}
 // output:{20,30,40,50,10}
@@ -306,3 +312,25 @@
 // }
 // // output:
 // // [50, 20, 30, 40, 10]
+
+
+
+
+//----------------------------------------------------------------
+// date: 10-5-24
+
+// homework :
+
+// wap to reverse an array without using 3rd variable 
+// input: {1,7,4,9,2}
+// output: {2,9,4,7,1}
+
+
+//wap to replace each element with sum of their digit
+// input: {53,67,12,63,28,467,124,35}
+// output: {8,13,3,9,10,17,7,8} 
+
+
+// wap to append sum of their element at last of element
+// input: {53,67,12,63,28,467,124,35}
+// output: {538,6713,123,639,2810,46717,1247,358}
