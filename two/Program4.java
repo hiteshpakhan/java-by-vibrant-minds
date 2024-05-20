@@ -325,12 +325,77 @@
 // input: {1,7,4,9,2}
 // output: {2,9,4,7,1}
 
+// import java.util.Arrays;
+// public class Program4 {
+//     public static void main(String[] args) {
+//         int a[] = {10,20,30,40,50};
 
+//         for(int i = 0; i < a.length/2; i++){
+//             a[i] += a[a.length-1-i];
+//             a[a.length-1-i] = a[i]-a[a.length-1-i];
+//             a[i] -= a[a.length-1-i];
+//         }
+
+//         System.out.println(Arrays.toString(a));
+//     } 
+// }  
+// // output:
+// // [50, 40, 30, 20, 10]
+
+//-----------------------------------
 //wap to replace each element with sum of their digit
 // input: {53,67,12,63,28,467,124,35}
 // output: {8,13,3,9,10,17,7,8} 
 
 
+// import java.util.Arrays;
+// public class Program4 {
+//     public static void main(String[] args) {
+//         int a[] = {53,67,12,63,28,467,124,35};
+
+//         for(int i = 0; i < a.length; i++){
+//             int sum = 0;
+            
+//             while(a[i] != 0){
+//                 sum += a[i] % 10;
+//                 a[i] /= 10;
+//             }
+
+//             a[i] = sum;
+//         }
+        
+//         System.out.println(Arrays.toString(a));
+//     } 
+// }  
+// // output:[8, 13, 3, 9, 10, 17, 7, 8]
+
+
+//------------------------------------
 // wap to append sum of their element at last of element
 // input: {53,67,12,63,28,467,124,35}
 // output: {538,6713,123,639,2810,46717,1247,358}
+
+// import java.util.Arrays;
+// class Program4{
+//     public static void main(String []args){
+//         int a[] = {53,67,12,63,28,467,124,35};
+//         for(int i=0;i<a.length;i++){
+//             int temp = a[i];
+//             int sum = 0;
+//             while(temp != 0){
+//                 sum += temp%10;
+//                 temp /= 10;
+//             }
+//             temp=sum;
+//             int length=0;
+//             while(temp!=0){
+//                 temp/=10;
+//                 length++;
+//             }
+//             a[i] *= Math.pow(10, length);   //it will put the number of zeros we want to put behind the array numbers so that we can simple add the numbers and the concatination happens
+//             a[i] += sum;
+//         }
+//         System.out.println(Arrays.toString(a));
+//     }
+// }
+// // output: [538, 6713, 123, 639, 2810, 46717, 1247, 358]
