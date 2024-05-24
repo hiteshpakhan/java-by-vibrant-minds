@@ -78,6 +78,30 @@
 // input : {34,18,24,16,12,20,32,44,15,41}
 // output : {}
 
+// import java.util.Arrays;
+// class Program5 {
+//     public static void main(String[] args) {
+//         int a[] = {34,18,24,16,12,20,32,44,15,41};
+//         for(int i = 0; i < a.length; i++){
+//             if((a[i] % 4) == 0){
+//                 if((a[i] % 10) == 4){
+//                     a[i] = -3;
+//                 }else{
+//                     a[i] = -1;
+//                 }
+//             }else{
+//                 if((a[i] % 10) == 4){
+//                     a[i] = -2;
+//                 }
+//             }
+//         }
+//         System.out.println(Arrays.toString(a));
+//     }
+// }
+// // output: [-2, 18, -3, -1, -1, -1, -1, -3, 15, 41]
+
+//method two you can also do this by turnnary operator like following:
+    // a[i] = ((a[i] % 4) == 0)?((a[i] % 10) == 4)?-3:-1:((a[i] % 10) == 4)?-2:a[i];
 
 
 //----------------------------------------
@@ -93,3 +117,6 @@
 //
 // input: {15,16,18,28,38,24,32,30,42,36}
 // output: {}
+
+
+
