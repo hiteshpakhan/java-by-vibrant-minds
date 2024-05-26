@@ -47,11 +47,37 @@
 
 //---------------------------------------------------------------
 
-// wap to find 81th palendrome number 
+//#imp
 
+// // wap to find 81th palendrome number 
+// // solved by sir
 // class Program7 {
-
+//     public static void main(String[] args) {
+//         int a = 0, count = 0, last = 81;
+//         while(true){
+//             int temp = a;
+//             int sum = 0;
+//             while(temp != 0){
+//                 sum *= 10;
+//                 sum += temp % 10;
+//                 temp /= 10;
+//             }
+//             if(sum == a){
+//                 count++;
+//             }
+//             if(count == last){
+//                 System.out.println(count+"th pclendrome number is "+ a);
+//                 break;
+//             }
+//             a++;
+//         }        
+//     }
 // }
+// // output:
+// // 81th pclendrome number is 717
+
+
+
 
 //---------------------------------------------------------------
 // wap a programe to display the first 25 palendromic number in reverse order
@@ -127,7 +153,73 @@
 
 // ---------------------------------------------------------------
 
+// wap to find given number is palendromic prime or not 
+
+// public class Program7 {
+//     public static void main(String[] args) {
+//         int n = 131;
+//         boolean b = false;
+//         if(n == 0 || n == 1){
+//             b = true;
+//         }else{
+//             for(int i = 2; i <= Math.sqrt(n); i++){
+//                 if(n % i == 0){
+//                     b = true;
+//                     break;
+//                 }
+//             }
+//         }
+//         if(!b){
+//             int sum = 0, temp = n;
+//             while(temp != 0){
+//                 sum *= 10;
+//                 sum += temp % 10;
+//                 temp /= 10;
+//             }
+//             if(sum == n){
+//                 System.out.println(n + " is palendromic prime ");
+//             }
+//         }
+//     }
+// }
+// // output:
+// // 131 is palendromic prime
+
+
+// ---------------------------------------------------------------
+
+//#imp
 // wap to display first 35 prime number in reverse order
+
+// import java.util.Arrays;
+// public class Program7 {
+//     public static void main(String[] args) {
+//         int a = 0, last = 35, first = 0, arr[] = new int[last];
+//         while(true){
+//             boolean b = false;
+//             if(a == 0 || a == 1){
+//                 b = true;
+//             }else{
+//                 for(int i = 2; i <= Math.sqrt(a); i++){
+//                     if(a % i == 0){
+//                         b = true;
+//                         break;
+//                     }
+//                 }
+//             }
+//             if(!b){
+//                 arr[arr.length-1-first++] = a;
+//             }
+//             if(first == last){
+//                 break;
+//             }
+//             a++;
+//         }
+//         System.out.println(Arrays.toString(arr));
+//     }   
+// }
+// // output: 
+// // [149, 139, 137, 131, 127, 113, 109, 107, 103, 101, 97, 89, 83, 79, 73, 71, 67, 61, 59, 53, 47, 43, 41, 37, 31, 29, 23, 19, 17, 13, 11, 7, 5, 3, 2]
 
 // ----------------------------------------------------------------
 
@@ -283,3 +375,48 @@
 
 //--------------------------------------------------------------
 
+//perfect square    //means the square root of that number shoud not have any fraction means it shoud not have any value in points it will considered as perfect square
+
+// public class Program7 {
+//     public static void main(String[] args) {
+//         for(int j = 1; j <= 100; j++){
+//             int i = j;
+//             if(Math.sqrt(i) % 1 == 0){
+//                 System.out.println(i + " is a perfect square");
+//             }
+//         }
+//     }
+// }
+// // output:
+// // 1 is a perfect square
+// // 4 is a perfect square
+// // 9 is a perfect square
+// // 16 is a perfect square
+// // 25 is a perfect square
+// // 36 is a perfect square
+// // 49 is a perfect square
+// // 64 is a perfect square
+// // 81 is a perfect square
+// // 100 is a perfect square
+
+
+
+//-----------------------------------------------------------------
+
+// wap to find 52th perfect square number
+
+
+//-----------------------------------------------------------------
+
+// wap to display first 35 perfect square number in reverse order
+
+//-----------------------------------------------------------------
+
+// wap to find 82th perfect cube number
+
+
+//-----------------------------------------------------------------
+
+// wap to display first 25 perfect cube number in reverse order
+
+//-----------------------------------------------------------------
