@@ -143,10 +143,4 @@
 // input: international
 // output: 6nt5rn4t32n1l
 
-
-public class Program11 {
-    public static void main(String[] args) {
-        
-    }
-    
-}
+//this homework is completed by sir on next day

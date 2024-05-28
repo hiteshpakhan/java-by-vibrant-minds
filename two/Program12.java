@@ -84,4 +84,135 @@
 // ------------------------------------------------
 
 
+// public class Program12 {
+//     public static void main(String[] args) {
+//         String s1 = "Computer";
+//         String s2= "AEIOUaeiou";
+//         StringBuilder sb = new StringBuilder();
+//         StringBuilder vowels = new StringBuilder();
+//         for(int i = 0; i < s1.length(); i++){
+//             if(!s2.contains(String.valueOf(s1.charAt(i)))){
+//                 sb.append(s1.charAt(i));
+//             }else{
+//                 vowels.append(s1.charAt(i));
+//             }
+//         }
+//         System.out.println(sb);
+//         System.out.println(vowels);
+//     }
+// }
+// // output:
+// // Cmptr
+// // oue
 
+
+
+
+
+// // wap to shift vovels at last
+// public class Program12 {
+//     public static void main(String[] args) {
+//         String s1 = "Computer";
+//         String s2= "AEIOUaeiou";
+//         StringBuilder sb = new StringBuilder();
+//         StringBuilder vowels = new StringBuilder();
+//         for(int i = 0; i < s1.length(); i++){
+//             if(!s2.contains(String.valueOf(s1.charAt(i)))){
+//                 sb.append(s1.charAt(i));
+//             }else{
+//                 vowels.append(s1.charAt(i));
+//             }
+//         }
+//         sb.append(vowels);
+//         System.out.println(sb);
+//     }
+// }
+// // output:
+// // Cmptroue
+
+
+//---------------------------------------------------------
+
+
+// wap to replace at vovels
+// input: international
+// output: 1nt2rn3t45n6l
+
+// public class Program12 {
+//     public static void main(String[] args) {
+//         String s1 = "International";
+//         String s2= "AEIOUaeiou";
+//         StringBuilder sb = new StringBuilder();
+//         int count = 0;
+//         for(int i = 0; i < s1.length(); i++){
+//             if(s2.contains(String.valueOf(s1.charAt(i)))){
+//                 sb.append(++count);
+//             }else{
+//                 sb.append(s1.charAt(i));
+//             }
+//         }
+//         System.out.println(sb);
+//     }    
+// }
+// // output:
+// // 1nt2rn3t45n6l
+
+
+
+
+// wap to replace at vovels
+// input: international
+// output: 6nt5rn4t32n1l
+
+// public class Program12 {
+//     public static void main(String[] args) {
+//         String s1 = "International";
+//         String s2= "AEIOUaeiou";
+//         StringBuilder sb = new StringBuilder(s1);
+//         int count = 0;
+//         for(int i = sb.length()-1; i >= 0; i--){
+//             if(s2.contains(String.valueOf(s1.charAt(i)))){
+//                 sb.deleteCharAt(i);
+//                 sb.insert(i, ++count);
+//             }
+//         }
+//         System.out.println(sb);
+//     }    
+// }
+// // output:
+// // 6nt5rn4t32n1l
+
+
+
+
+
+//-------------------------------------------------------------------------------
+
+import java.util.Arrays;
+
+/**
+ * Program12
+ */
+public class Program12 {
+
+    public static void main(String[] args) {
+        
+        String s1 = "International";
+        String s2= "AEIOUaeiou";
+        StringBuilder vowels = new StringBuilder();
+        StringBuilder cons = new StringBuilder();
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0; i < s1.length(); i++){
+            if(s2.contains(String.valueOf(s1.charAt(i)))){
+                vowels.append(s1.charAt(i));
+            }else{
+                cons.append(s1.charAt(i));
+            }
+        }
+        Arrays.sort(vowels.toString().toCharArray());
+        Arrays.sort(cons.toString().toCharArray());
+        sb.append(cons);
+        sb.append(vowels);
+        System.out.println(sb);
+    }
+}
