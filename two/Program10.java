@@ -70,7 +70,7 @@ imp: string is immutable
         - string builder also not support the concat method insted it uses append() method
         - StringBuilder is non-synchronized or thread-unsafe implementation
         - StringBuilder is faster than StringBuffer
-        - StringBuilder is introduced in java 1.5 version
+        - StringBuilder is introduced in java 1.5 versiong
         eg: 
             StringBulder sb = new StringBuilder("India");
             sb.append("Digital");
