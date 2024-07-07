@@ -1,0 +1,19 @@
+hibernet:
+
+	- hibernet is a framework which is developed by gaving king in 2001
+	- hibernet is an orm (object relational mapping) tool 
+	- what is ORM:
+		-in orm tool object will be mapped with table
+		- due to ORM TOOL we can perform CRUD operation easily
+		- in market there are many orm tool available
+		- EJB, EJB2,struct,struct2,iBatis,TopLinks,hibernate etc.
+
+featuresof hibernet:
+1) opensource
+2) automatic table creation
+3) complex join
+4) HQL and HCQL
+5) table relation
+6) query status
+7) fetching technique	- ()
+8) catching technique
