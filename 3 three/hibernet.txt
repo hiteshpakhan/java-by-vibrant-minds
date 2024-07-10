@@ -17,3 +17,203 @@ featuresof hibernet:
 6) query status
 7) fetching technique	- ()
 8) catching technique
+
+
+
+date: 4-7-24
+---------------------------------------------
+what is hbm.xml?
+
+	- in hibernate hbm.xml is an xml file which stands for hibernate mapping xml file
+	- in hbm.xml object will be mapped by using xml
+	- in hbm.xml <hibernate-mapping><class><id><generator><property> etc tags be used
+	- in application there can be multiple hbm.xml as per object
+	- this file can be located in src/main/java or classpath
+	- example:
+		<hibernate-mapping>
+    			<class name="com.model.Student">
+	    			<id name="sid" type="int">
+	    				<generator class="identity"></generator>
+	    			</id>
+	    			<property name="sname" type="java.lang.String"></property>
+	    			<property name="scity" type="java.lang.String"></property>
+	    			<property name="spercentage" type="Double"></property>
+    			</class>
+    		</hibernate-mapping>
+--------------------------------------
+what is cfg.xml file
+	- in hibernate cfg.xml is an xml file which stands for hibernate configuration xml file 
+	- in cfg.xml configuration of hibernate will be done
+	- in application there can be only one cfg.xml file because configuration will ge done once in an application
+	- in cfg.xml <hibernate-configuration> <session-factory> <property> <mapping> etc tags can be used
+	- default name of cfg.xml file set as hibernate.cfg.xml file
+	- this file can be loaded by using configure() method of Configuration Class
+	- this fiule can be located in src/main/java or classpath
+	- example:
+		<hibernate-configuration>
+		<session-factory>
+			<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+			<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/jap67</property>
+			<property name="hibernate.connection.username">root</property>
+			<property name="hibernate.connection.password">Luci@714</property>
+			
+			<property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property> <!-- database dialect -->
+			<property name="hibernate.hbm2ddl.auto">update</property> <!-- as per your mapping you want to automatically want to create table-->
+			<property name="hibernate.show_sql">true</property> <!-- if you want to show query then true otherwise false -->
+			<property name="hibernate.format_sql">true</property> <!--  -->
+			
+			<mapping resource="Student.hbm.xml"/> <!-- if you have done mapping by xml then use resource="" but if you done it by annotation in class then use class="" -->
+		</session-factory>
+	</hibernate-configuration> 
+
+--------------------------------------------------------------------
+	-Configuration is a class which is located in org.hibernate.cfg package.
+	-by using Configuration class we can load cfg.xml fiel 
+	eg:
+	Configuration con = new Configuration().configure();	
+-------------------------------------------------------------------
+what is SessionFactory?
+	- SessionFactory n interface which is located in org.hibernate package
+	- instance of SessionFactory can be achived buildSessionFactory() method of Configuration class
+	eg: 
+	Configuration con = new Configuration().configure();	
+        SessionFactory sf = con.buildSessionFactory();	
+	-SessionFActory holds a logical database connection
+	- SessionFactory is a thread-safe
+	- SessionFactory is immutable
+----------------------------------
+what is Session:
+	-  Session is an interface which is located in org.hibernate package
+	- instance of session can be used to achive by using openSession() or getCurrentSession() method of SessionFactory interface
+	- openSession() method returns instance of new Session.
+	- getCurrentSession() returns existing instance of 
+Session
+	- by using Session we can perform CRUD operations
+	- to perform CRUD operation Session interface introduced methods like save(), delete() update() saveOrUpdate() get() etc.
+	-eg:
+	Configuration con = new Configuration().configure();
+        SessionFactory sf = con.buildSessionFactory();	
+        Session session = sf.openSession();
+--------------------------------------------------------------------------
+what is Transaction?
+	-transaction is  an interface which is located in org.hibernate package
+	- instance of Transaction can be achive by using beginTransaction() or getTransaction() method of Session interface
+	- beginTransaction() method returns instance of new transaction
+	- getTransaction() method returns instance of existing Transaction
+	- Transaction interface can be used to commit number of dml operations done by Session interface
+	ex:
+	Configuration con = new Configuration().configure();
+        SessionFactory sf = con.buildSessionFactory();	
+        Session session = sf.openSession();
+        Transaction tx = session.beginTransaction();
+        
+        Student s1 = new Student();
+        s1.setSname("rakesh2");
+        s1.setScity("pune2");
+        s1.setSpercentage(91.21);
+        
+        session.save(s1);
+        
+        tx.commit();	
+        session.close();
+
+----------------------------------------------------------------------
+
+state of objects in hibernate:
+1- Transient State
+	- in hibernate object considered in transient state if it dosent associated with session or database yet
+	- transient object also considered as a new object
+
+2- Persistence State
+	- in hibernate object considered in persistence state if it associated with session not database
+	- persistence object also considered as in-processing object
+
+3- Detached 
+	in hibernate object considered in detached state if it associated with database not session anymore	
+	detached object also considered as an old object
+---------------------------------------------------------------
+method of Session:
+1)save()
+	- save() method can be used to insert a record
+	- save method returns a serializable id
+	- save method requires transient object
+
+2)update()
+	- update method can be used to update a record
+	- update() method require detached object
+	
+3) saveOrUpdate()
+	- saveOrUpdate() method can be used to insert or update a record
+	- saveOrUpdate() method insert a record if mentioned  object is transient
+	- saveOrUpdate() method update a record if mentioned object is detached 
+
+4) delete() 
+	- delete() method can be used to delete a record 
+	- delete() method requires detached object
+
+5) get()
+	- get method can be used to featch record
+	- get method returns object or null
+
+6) load()
+	- load method can be used to featch record
+	- load method returns object or exception
+	- note: 
+		load method can be used if we assure about object
+		load method is faster than get() 
+------------------------------------------------------------------------------------------------------
+
+
+concocome company
+
+Date: 5-7-24
+----------------------------------------------------------------------------------
+JPA API:
+	- jpa stands for javax persistence api 
+	- by using JPA API we can mapped object by using annotation
+
+1) @Entity:
+	-@Entity is an annotation which is located in javax.persistence package
+	-this annotation can be used to denotes a class as an entity
+	-in hibernate entity class considered as a table or record 
+	-this annotation can be used over class name
+
+2) @Id:
+	-@Id is an annotation which is located in javax.persistence package
+	- this annotation can be used to denotes a property as an Id
+	- this annotation can be used over property name
+	
+3)@GeneratedValue
+	- @GeneratedValue is anm annotation which is located in javax.persistence package
+	- this annotation can be used to denotes generation type of ID
+	- this annotation can be used over property name
+
+4) @Table:
+	-@Table is an annotation which is located in javax.persistence package
+	- this annotation can be used to denoted user-defined name of table	
+	- this annotation can be used over class name
+
+5) @column
+	-column is an annotation which is located in javax.persistence package
+	- this annotation can be used to have user-defined column
+	- this annotation can be used over property name 
+	- by using @Column annotation we can set name,length,type column of the table
+	
+6) @Transient :
+	- 
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
