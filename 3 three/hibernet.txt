@@ -200,7 +200,36 @@ JPA API:
 	- by using @Column annotation we can set name,length,type column of the table
 	
 6) @Transient :
-	- 
+	- @Trnsitionis an annotion which is located in javax.persistence package
+	- this annotation can be used to denotes a property as a transient property
+	- inhibernate transient property will not be a part of table anymore
+	- this annotion can be used over property
+
+7) @Embeddable :
+	-@Embeddable is an annotation which is located in javax.persistence package
+	- this annotation can be used to denoted a class as an embeddable class
+	- in hibernate embeddable class will not create a seperate table, it becomes a part of a table 
+	- this annotation can be used over class name
+
+8) @Embedded:
+	- @Embedded is an annotation which is located in javax.persistence package
+	- this annotation can be used to denotes embeddable property
+	- this annotation can be used over property name 
+	
+9) @OneToOne
+10) @OneToMany
+11) @MAnyToMany
+12) @ManyToMAny
+13) @NamedQuery()
+14) @Cache
+15) @Cacheable
+-------------------------------------------------------------------------------------------
+
+Date: 9-7-24
+
+	
+
+	
 	
 
 
