@@ -349,6 +349,7 @@ date 10-7-24
 ---------------------------------------------------
 HCQL
 	we use HCQL for display because we have many complex queries in display commands
+	it performs complex validations easily
 
 	example:
 	//(for display all)
@@ -364,7 +365,95 @@ HCQL
 			System.out.println(s);
 		}
  
+------------------------------------------------------------------------------------------------------------------------------------------------------
 
+date: 11-7-24
+-------------
+	
+HCQL:
+	-hcql stands for hibernate criretia query language
+	-hcql can be sued to perform complex validations easily
+	-by suing hcql we can perform display operations only
+	-to work with hcql, we can use creteCriteria method of Session interface
+	-createCriteria() method reurns instance of Criteria interface
+
+methods of Criteria interface
+1) list()
+	list() method returns instance of list interface
+	list() can be used if multiple object can be returned
+
+2) uniqueResult()
+	uniqueResult() method returns object or null
+	uniqueResult() method can be used if single object can be return
+
+3) add()
+	add() method can be used to add restrictions into query
+	restrictions can be add by using Restrictions class
+	Restriction is a class which is located in org.hibernate.riterion package
+	Restrictions class contains static methods like it(), le(), gt(), ge(),  eq(), ne(), in(), between(), like(), and() or() etc.
+	add() method returns instance of Criteria interface
+
+4) addOrder()
+	addOrder() methodcan be sued to add order into query
+	to add order we can use order class
+	order is a class which is located in org.hibernate.Criteria package
+	Order class contains static method like asc() dec()
+	adddOrder() method returns instance of Criteria interface
+
+5) setProjection
+	- setProjection() method can be used for aggregate function 
+	- to use aggregate function we can use Projections class
+	- projections is a class which is located in org.hibernate.criterion package
+	- Projections class contains static method like sum() count() avg() min() max() property() etc.
+	- setProjection() method returns instance of Criteria interface 	
+
+6) setMaxResults()
+	- setMaxResults method can be used to set limit into query
+	- setMaxResults method returns instance of criteria interface
+
+7) setFirstResult()
+	- setFirstResult() method used to skip number of records
+	- setFirstResult() method return instance of Criteria interface
+	
+8) setCacheable()
+-------------------------------------------------------------------------------------------------------------------
+
+example:
+	
+1)display all student
+	//method without chaining example
+	//or
+	//method chaining example
+
+2)display student by sid
+
+3) display student by sid and sname
+	
+4)
+
+5)
+
+6) display student by sid not lessthan
+
+7) display student by sid between
+
+11) display student by spercentage less than order by scity
+
+12) display all name of student
+
+13) display highest percentage 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+date: 12 - 7 -24
+----------------
+
+in HCQL:
+
+1) find higest percentage of student 
+
+2) find second higest percentage student
+
+find third higest percentage student
 
 
 	
