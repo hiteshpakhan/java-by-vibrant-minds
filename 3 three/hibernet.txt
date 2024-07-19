@@ -227,7 +227,145 @@ JPA API:
 
 Date: 9-7-24
 
+
+HQL:
+	- HQL stands for hibernate query language
+	- HQL is similar like SQL and easier than SQL
+	eg:
+		delete from student where sid=5		-sql
+		delete from Student where sid=5		-hql
+	- in sql query works on table and column
+	- in hql query works on class and property
+	- HQL considered as a polymorphic query because as per mentioned dialecthql converted into database supported query
+	- HQL works on class and property hence it is considered as an object oriented query
+	- to work with HQL we can use createQuery() method of Session interface
+	- createQuery method returns instance of query interface 
 	
+- methods of query:
+1) list():	(if one or more than one objects are coming then you can use this)
+	- list() method can be used to perform select quey
+	- list() method returns instance of list interface
+	- list() method can be used if multiple objects can be returns
+
+2) uniqueResult():	(if only one object will return then only use this)
+	- uniqueResult() method can be used to perform select query
+	- uniqueResult() method returns object or null
+	- uniqueResult() method can be used if single object can be returns
+
+3) executeUpdate():
+	- executeResult() method can be used to perform delete and update query
+	- executeResult() method returns int value
+
+4) setParameter():
+	- setParameter() method can be used to pass parameter into query
+	- setParameter() method returns instance of query
+	
+5) setMaxResults() 
+	- setMaxResults() can be used to set limit into query
+	- setMaxQuery() method returns instance of query interface
+
+6) setFirstResult()
+	- setFirtstResult() method can be used to skip no of records
+	-method returns instance of query interface
+
+7) setCacheable()	(this is very important method that we will learn later)
+
+--------------------------------
+eg:
+-for displaying all the student:	
+	//(without method chaining)
+	Query<Student> q = session.createQuery("from Student", Student.class);
+        List<Student> list = q.list();
+        for(Student s: list) {
+
+        	System.out.println(s);
+        }
+	// or
+	//(with method chaining)
+	List<Student> list = session.createQuery("from Student", Student.class).list();	
+        for(Student s:list) {
+        	System.out.println(s);
+        }
+
+-find student by sid:
+	Query<Student> q = session.createQuery("from Student where sid=:a", Student.class);
+        q.setParameter("a", 10);
+        
+        Student s = q.uniqueResult();
+        System.out.println(s);
+	
+	//or
+
+	Student s = session.createQuery("from Student where sid=:a", Student.class).setParameter("a", 10).uniqueResult();
+        System.out.println(s);
+
+-find student by sid and sname
+	Query<Student> q = session.createQuery("from Student where sid=:a and sname=:b", Student.class);
+        q.setParameter("a", 18);
+        q.setParameter("b", "VGGGGHWOHBPPQXA");
+        Student s = q.uniqueResult();
+        System.out.println(s);
+
+	//or
+
+	Student s = session.createQuery("from Student where sid=:a and sname=:b", Student.class).setParameter("a", 18).setParameter("b", "VGGGGHWOHBPPQXA").uniqueResult();
+        System.out.println(s);
+
+-find student by percentage between 
+	Query<Student> q = session.createQuery("from Student where spercentage between :a and :b", Student.class);
+        q.setParameter("a", 12.0);
+        q.setParameter("b", 15.0);
+        List<Student> list = q.list();
+        for(Student s: list) {
+        	System.out.println(s);
+        }
+	
+	//or
+
+	List<Student> list = session.createQuery("from Student where spercentage between :a and :b", Student.class).setParameter("a", 12.0).setParameter("b", 15.0).list();
+        for(Student s: list) {
+        	System.out.println(s);
+        }
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+date 10-7-24
+------------
+
+-paginaton
+
+
+-delete student by sid :
+	int check = session.createQuery("delete from Student where sid=:a").setParameter("a", 5).executeUpdate();
+	System.out.println(check);
+
+
+-update student
+	example
+	//or
+	example
+
+---------------------------------------------------
+HCQL
+	we use HCQL for display because we have many complex queries in display commands
+
+	example:
+	//(for display all)
+	List<Student> list = session.createCriteria(Student.class).list();
+	for(Student s: list) {
+		System.out.println(s);
+	}
+	//(by asending order of "sname")
+	List<Student> list = session.createCriteria(Student.class)
+				.addOrder(Order.asc("sname"))
+				.list();
+		for(Student s: list) {
+			System.out.println(s);
+		}
+ 
+
+
 
 	
 	
