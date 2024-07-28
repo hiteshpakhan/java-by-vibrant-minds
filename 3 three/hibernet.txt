@@ -453,11 +453,60 @@ in HCQL:
 
 2) find second higest percentage student
 
-find third higest percentage student
+3) find third higest percentage student
 
+-----------------------------------
 
+relation
+
+@oneToOne
+
+@OneToMany
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	
+date : 13 - 7 - 24
+
+@ManyToOne 
+
+@ManyToMany
+------------------
+
+# fetching technique
+	- in hibernate fetching technique is a concept where we can fetch the record as per requirement
+	- by using fetching technique we can enhance performance of application 
+
+------------------------	
+types of fetching technique:
+
+1) LAZY fetching technique
+	-in LAZY fetching technique we can load records as per requirement not from the beginning
+	- eg:
+		@OneToOne(fetch = FetchType.LAZY)
+		private Laptop laptop;
+
+2) EAGER fetching technique
+	-  in eager fetching technique we can load records from the beginning 
+	eg:
+		@OneToOne(fetch = FetchType.EAGER)
+		private Laptop laptop;
+---------------------------------------------------
+
+# catching technique
+	-in hibernate where we can enhance performance of application
+	-in hibernate recent searched record will be stored in cache memory if we request for the same hibernate will not execute the query for the same 
+-----------------------------
+types of catching technique:
+
+1) first level catch
+	- in hibernate first level catch is enabled by default	
+	- in hibernate first level catch is enabled for session
+	- here session means one user
 	
+2) Second level catch
+	- 		 
+
+		
 
 
 
